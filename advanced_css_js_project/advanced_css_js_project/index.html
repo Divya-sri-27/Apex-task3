@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Advanced CSS & JavaScript — Interactive Project</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo">Advanced CSS & JS</h1>
+      <button id="themeToggle" aria-label="Toggle dark mode" class="btn small">Dark</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="hero" class="card">
+      <h2>Responsive, Interactive, Data-driven</h2>
+      <p class="lead">A demo project showcasing media queries, an image carousel, an interactive quiz, and API data fetching.</p>
+      <div class="cta-row">
+        <a href="#carousel" class="btn">See Carousel</a>
+        <a href="#quiz" class="btn ghost">Try Quiz</a>
+        <a href="#api" class="btn ghost">Live API</a>
+      </div>
+    </section>
+
+    <!-- Carousel -->
+    <section id="carousel" class="card">
+      <h3>Image Carousel</h3>
+      <div class="carousel" aria-roledescription="carousel">
+        <button class="carousel-btn prev" aria-label="Previous">‹</button>
+        <div class="carousel-track">
+          <div class="carousel-slide"><img src="images/img1.svg" alt="Scenery 1"></div>
+          <div class="carousel-slide"><img src="images/img2.svg" alt="Scenery 2"></div>
+          <div class="carousel-slide"><img src="images/img3.svg" alt="Scenery 3"></div>
+        </div>
+        <button class="carousel-btn next" aria-label="Next">›</button>
+      </div>
+      <div class="carousel-controls">
+        <button id="autoToggle" class="btn small ghost">Auto: On</button>
+      </div>
+    </section>
+
+    <!-- Quiz -->
+    <section id="quiz" class="card">
+      <h3>Interactive Quiz</h3>
+      <div id="quizApp">
+        <div id="questionCard">
+          <p id="questionText">Question will appear here</p>
+          <div id="answers" class="answers"></div>
+          <div class="quiz-footer">
+            <button id="nextBtn" class="btn">Next</button>
+            <button id="restartBtn" class="btn ghost">Restart</button>
+          </div>
+        </div>
+        <div id="resultCard" class="hidden">
+          <h4>Result</h4>
+          <p id="scoreText"></p>
+          <button id="backToQuiz" class="btn">Back</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- API -->
+    <section id="api" class="card">
+      <h3>Fetch Data from an API</h3>
+      <p>Press the button to fetch a random joke from the public Joke API.</p>
+      <div class="api-row">
+        <button id="fetchJoke" class="btn">Get a Joke</button>
+        <div id="jokeOutput" class="joke-box" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- Footer / Notes -->
+    <section class="card small">
+      <h4>Notes & Deployment</h4>
+      <ul>
+        <li>This project is static and can be deployed to GitHub Pages or Netlify.</li>
+        <li>API calls happen client-side using <code>fetch()</code>. Replace API endpoints or add an API key if needed.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>Made as a learning project — responsive + interactive. © 2025</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
